@@ -1,0 +1,72 @@
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>College Home</title>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="833665607730-2h5mhsv8gbjhs894tso1m8fdk0c01lkd.apps.googleusercontent.com">
+<script>
+	var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+
+	Notification.requestPermission(function (permission) {
+		// console.log(permission);
+	});
+
+	function show() {
+		var instance = new Notification(
+			"School Alert", {
+				body: "Assignments due coming up"
+			}
+		);
+
+		instance.onclick = function () {
+			// Something to do
+		};
+		instance.onerror = function () {
+			// Something to do
+		};
+		instance.onshow = function () {
+			// Something to do
+		};
+		instance.onclose = function () {
+			// Something to do
+		};
+		
+	}
+		
+</script>
+
+<button type="button" onclick="show()">Notify me!</button>
+
+    </head>
+    <body>
+        <div class="app">
+            <h1>Rasmussen College</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">College site</p>
+                <p class="event received">Device is Ready and you can click on below link </p>
+                <a href="home.html"><font style="font-size: 40px;">College Home</font></a>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+		<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+</div>
+    </body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
