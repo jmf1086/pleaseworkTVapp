@@ -17,12 +17,7 @@ if($conn->connect_error){
 		$pass =$_POST['pass'];
 		$sql ="select * from login where username = '".$user."' and password='".$pass."' LIMIT 1";
 		$result = $conn->query($sql);
-		if($result->num_rows>0){
-			echo("you have successfully loggined");
-			exit();
-		}else{
-			echo("goto previous page");
-			exit();
+		
 		}
 	}
 ?>
