@@ -45,7 +45,7 @@
 </div>
 <div data-role="page" id="shows" data-add-back-btn="true" data-transition="slide">
   <div data-role="header">
-    <h1>Menu</h1>
+    <h1>Your Shows</h1>
   </div>
   <div data-role="content">Your Shows</div>
   <div data-role="footer">

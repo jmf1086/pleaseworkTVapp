@@ -4,7 +4,7 @@
 $servername = "joeytvserver.database.windows.net";
 $username="jmf1086";
 $password="homefry1";
-$dbname="TvShows";
+$dbname="joeytv";
 //create connection
 $conn=new MySQLi($servername,$username,$password,$dbname);
 
@@ -19,7 +19,7 @@ if($conn->connect_error){
 		$result = $conn->query($sql);
 		
 		}
-	}
+	
 ?>
 <html>
 <head>
@@ -29,13 +29,13 @@ if($conn->connect_error){
 
 <body>
 <h1>Login</h1>
-<form name="login_form"
+<form name="login_form" method="post" action="index.php"
 >
 <label>Username:<br/></label>
 <input name="username" type="text" autofocus="autofocus" required="required"><br/>
 <label>Password:<br/></label>
 <input name="pasword" type="password" autofocus="autofocus" required="required"><br/>
-<input type="submit" formaction="index.php" value=login>
+<input type="submit" value=login>
 </form>
 </body>
 </html>
