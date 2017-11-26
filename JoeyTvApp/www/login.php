@@ -1,28 +1,5 @@
 <!doctype html>
-<?php
 
-$servername = "joeytvserver.database.windows.net";
-$username="jmf1086";
-$password="homefry1";
-$dbname="joeytv";
-//create connection
-$conn=new MySQLi($servername,$username,$password,$dbname);
-
-//check the connection 
-if($conn->connect_error){
-	die("connection failed".$conn->connect_error);
-}
-	if(isset($_POST['user'])){
-		$user=$_POST['user'];
-		$pass =$_POST['pass'];
-		$sql ="select * from login where username = '".$user."' and password='".$pass."' LIMIT 1";
-		$result = $conn->query($sql);
-		header("location: index.php");
-		
-		}
-	
-?>
-<!doctype html>
 
 <html>
 <head>
