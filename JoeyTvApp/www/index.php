@@ -55,6 +55,8 @@
 <div data-role="page" id="aboutus" data-add-back-btn="true" data-transition="slide">
   <div data-role="header">
     <h1>About Us</h1>
+    <h3>We are a small group of people looking to make your tv watching life easier.<br/>
+    We charge nothing for our services. The only thing we ask is you be respectful.</h3>
   </div>
   <div data-role="content">
     <p></p>
@@ -136,6 +138,9 @@
 <div data-role="page" id="pshows" data-add-back-btn="true" data-transition="slide">
   <div data-role="header">
     <h1>Popular Shows</h1>
+    <h2>The Good Place<br/>
+    Brooklyn Nine Nine<br/>
+    Bob's Burgers<br/></h2>
   </div>
   <div data-role="content"></div>
   <div data-role="footer">
