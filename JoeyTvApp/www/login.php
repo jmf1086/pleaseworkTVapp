@@ -1,9 +1,10 @@
 <!doctype html>
 <?php
-$servername = "localhost";
-$username="root";
-$password="";
-$dbname="test";
+
+$servername = "joeytvserver.database.windows.net";
+$username="jmf1086";
+$password="homefry1";
+$dbname="joeytv";
 //create connection
 $conn=new MySQLi($servername,$username,$password,$dbname);
 
@@ -16,31 +17,27 @@ if($conn->connect_error){
 		$pass =$_POST['pass'];
 		$sql ="select * from login where username = '".$user."' and password='".$pass."' LIMIT 1";
 		$result = $conn->query($sql);
-		if($result->num_rows>0){
-			echo("you have successfully loggined");
-			exit();
-		}else{
-			echo("goto previous page");
-			exit();
+		header("location: index.php");
+		
 		}
-	}
+	
 ?>
+
 <html>
 <head>
 <meta charset="utf-8">
-<title>login form</title>
-<style type="text/css">
-body {
-	background-color: #F1E2E2;
-}
-</style>
+<title>Login</title>
 </head>
 
 <body>
-<form method="post" action="login.php">
-	username:<input type="text" name="user"><br><br>
-	password:<input type="text" name="pass"><br><br>
-	<input type="submit" value="login">
+<h1>Login</h1>
+<form name="login_form" method="post" action="login.php"
+>
+<label>Username:<br/></label>
+<input name="username" type="text" autofocus="autofocus" required="required"><br/>
+<label>Password:<br/></label>
+<input name="pasword" type="password" autofocus="autofocus" required="required"><br/>
+<input type="submit" value=login>
 </form>
 </body>
 </html>
