@@ -17,6 +17,7 @@ if($conn->connect_error){
 		$pass =$_POST['pass'];
 		$sql ="select * from login where username = '".$user."' and password='".$pass."' LIMIT 1";
 		$result = $conn->query($sql);
+		header("location: index.php");
 		
 		}
 	
@@ -29,7 +30,7 @@ if($conn->connect_error){
 
 <body>
 <h1>Login</h1>
-<form name="login_form" method="post" action="index.php"
+<form name="login_form" method="post" action="login.php"
 >
 <label>Username:<br/></label>
 <input name="username" type="text" autofocus="autofocus" required="required"><br/>
