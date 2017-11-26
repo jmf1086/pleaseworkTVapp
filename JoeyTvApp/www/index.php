@@ -138,7 +138,7 @@
 <div data-role="page" id="pshows" data-add-back-btn="true" data-transition="slide">
   <div data-role="header">
     <h1>Popular Shows</h1>
-    <h2>The Good Place <br/>
+    <h2><a href="https://www.nbc.com/the-good-place?nbc=1" title="the good place " target="_blank">The Good Place</a><br/>
     Brooklyn Nine Nine<br/>
     Bob's Burgers<br/></h2>
   </div>
