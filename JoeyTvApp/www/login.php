@@ -1,9 +1,9 @@
 <!doctype html>
 <?php
 
-$servername = "tcp:joeytvserver.database.windows.net,1433";
+$servername = "joeytvserver.database.windows.net";
 $username="jmf1086";
-$password="homefry1";
+$password="Homefry1";
 $dbname="TvShows";
 //create connection
 $conn=new MySQLi($servername,$username,$password,$dbname);
