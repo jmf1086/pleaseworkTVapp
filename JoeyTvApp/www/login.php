@@ -22,6 +22,8 @@ if($conn->connect_error){
 		}
 	
 ?>
+<!doctype html>
+
 <html>
 <head>
 <meta charset="utf-8">
