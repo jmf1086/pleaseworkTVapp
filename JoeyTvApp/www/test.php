@@ -9,7 +9,7 @@ catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 }
-
+?>
 <html>
 <head>
 <meta charset="utf-8">
