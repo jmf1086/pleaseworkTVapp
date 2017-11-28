@@ -17,6 +17,6 @@ catch (PDOException $e) {
 </head>
 
 <body>
-</body>
 	<h1>sdhu</h1>
+</body>
 </html>
