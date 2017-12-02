@@ -1,6 +1,6 @@
 <!doctype html>
 <?php
-   define('DB_SERVER', 'us-cdbr-azure-central-a.cloudapp.net');
+   define('DB_SERVER', us-cdbr-azure-central-a.cloudapp.net);
    define('DB_USERNAME', 'root');
    define('DB_PASSWORD', 'rootpassword');
    define('DB_DATABASE', 'joeytv');
