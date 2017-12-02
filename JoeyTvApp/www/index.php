@@ -1,4 +1,7 @@
 <!doctype html>
+<?php
+   include('session.php');
+?>
 <html>
 <head>
 <meta charset="utf-8">
@@ -27,6 +30,8 @@
 <div id="page" data-role="page" data-theme="b">
 	<div data-role="header" data-theme="b">
   	<h1>Joeys Tv Tracker</h1>
+  	 <h2><a href = "logout.php">Sign Out</a></h2>
+
 	<div class="logo"><img src="img/tv.jpg" width="200" height="" alt=""/> </div>
 	<p>This is your one stop place to keep track of all your TV shows. If you need a show to watch check out the Popular Show section!!<p>
 	</div>
