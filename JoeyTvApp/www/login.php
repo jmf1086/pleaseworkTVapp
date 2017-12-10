@@ -7,11 +7,11 @@
       // username and password sent from form 
 	   //test
       
-     // $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      // $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+     $myusername = mysqli_real_escape_string($db,$_POST['username']);
+     $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
       
-	  $myusername = $_POST['username'];
-	  $mypassword = $_POST['password'];
+	  //$myusername = $_POST['username'];
+	  //$mypassword = $_POST['password'];
 	   
       $sql = "SELECT ID FROM login WHERE username = '$myusername' and password = '$mypassword'";
       $result = mysqli_query($db,$sql);
@@ -30,7 +30,7 @@
          
          header("location: index.php");
       }else {
-         $error = "Your Login Name or Password is invalid $sql $myusername $mypassword";
+         $error = "Your Login Name or Password is invalid $sql $count";
       }
    }
 ?>
