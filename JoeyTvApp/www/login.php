@@ -4,6 +4,8 @@ global $db;
    
 
    include("config.php");
+		print_r($GLOBALS);
+
    session_start();
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
