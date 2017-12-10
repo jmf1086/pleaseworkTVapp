@@ -33,7 +33,7 @@ global $db;
          
          header("location: index.php");
       }else {
-         $error = "Your Login Name or Password is invalid $sql $count";
+         $error = "Your Login Name or Password is invalid $sql c: $count";
       }
    }
 ?>
