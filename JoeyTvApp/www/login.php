@@ -16,7 +16,7 @@ global $db;
 	  $myusername = $_POST['username'];
 	  $mypassword = $_POST['password'];
 	   
-      $sql = "SELECT ID FROM login WHERE username = '$myusername' and password = '$mypassword'";
+      $sql = "SELECT ID FROM login a WHERE username = '$myusername' and password = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $count = mysqli_num_rows($result); 
 	  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
