@@ -34,8 +34,8 @@ global $conn;
       // If result matched $myusername and $mypassword, table row must be 1 row
 	
 	   print_r($result);	
-	   
-      if($result ) {
+	   try{
+      if($result != FALSE ) {
          session_register("myusername");
          $_SESSION['login_user'] = $myusername;
          
@@ -43,6 +43,11 @@ global $conn;
       }else {
          $error = "Your Login Name or Password is invalid $sql c: 	$count";
       }
+	   }catch (Exception $e) {
+		  print_r ($e);
+		  
+		  die("your mother is a hamster and your your father smells of eldberryies");
+	  }
    }
 ?>
 <html>
