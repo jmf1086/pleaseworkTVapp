@@ -33,7 +33,7 @@ global $conn;
       
       // If result matched $myusername and $mypassword, table row must be 1 row
 	
-	   print_r($_POST);	
+	   print_r($result);	
 	   
       if($result ) {
          session_register("myusername");
