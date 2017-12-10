@@ -1,5 +1,8 @@
 <!doctype html>
 <?php
+global $db;
+   
+
    include("config.php");
    session_start();
    
