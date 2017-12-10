@@ -6,9 +6,12 @@
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
-      $myusername = mysqli_real_escape_string($db,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+     // $myusername = mysqli_real_escape_string($db,$_POST['username']);
+      // $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
       
+	  $myusername = $_POST['username'];
+	  $mypassword = $_POST['password'];
+	   
       $sql = "SELECT ID FROM login WHERE username = '$myusername' and password = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
@@ -18,7 +21,7 @@
       
       // If result matched $myusername and $mypassword, table row must be 1 row
 	
-	   print_r($_POST);
+	   print_r($_POST);	
 	   
       if($count == 1) {
          session_register("myusername");
