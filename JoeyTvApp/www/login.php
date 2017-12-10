@@ -4,7 +4,7 @@ global $db;
    
 
    include("config.php");
-		print_r($GLOBALS);
+	
 
    session_start();
    
