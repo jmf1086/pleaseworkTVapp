@@ -19,11 +19,16 @@ global $conn;
 	  $mypassword = $_POST['password'];
 	   
       $sql = "SELECT ID FROM Emp_Login WHERE username = '$myusername' and password = '$mypassword'";
-      $result = $conn->query($sql);
+      try{
+	   $result = $conn->query($sql);
       //$count = mysqli_num_rows($result); 
 	  //$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       //$active = $row['active'];
-      
+	  }catch (Exception $e) {
+		  print_r ($e);
+		  
+		  die("your mother is a hamster and your your father smells of eldberryies");
+	  }
      
       
       // If result matched $myusername and $mypassword, table row must be 1 row
