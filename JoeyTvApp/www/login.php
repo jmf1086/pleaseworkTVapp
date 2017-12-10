@@ -1,6 +1,6 @@
 <!doctype html>
 <?php
-global $db;
+global $conn;
    
 
    include("config.php");
@@ -18,11 +18,11 @@ global $db;
 	  $myusername = $_POST['username'];
 	  $mypassword = $_POST['password'];
 	   
-      $sql = "SELECT ID FROM login a WHERE username = '$myusername' and password = '$mypassword'";
-      $result = mysqli_query($db,$sql);
-      $count = mysqli_num_rows($result); 
-	  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
+      $sql = "SELECT ID FROM Emp_Login WHERE username = '$myusername' and password = '$mypassword'";
+      $result = $conn.query($sql);
+      //$count = mysqli_num_rows($result); 
+	  //$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      //$active = $row['active'];
       
      
       
@@ -30,7 +30,7 @@ global $db;
 	
 	   print_r($_POST);	
 	   
-      if($count == 1) {
+      if($result ) {
          session_register("myusername");
          $_SESSION['login_user'] = $myusername;
          

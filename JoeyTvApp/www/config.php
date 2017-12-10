@@ -1,15 +1,14 @@
 <!doctype html>
 <?php
-   define('DB_SERVER', joeytvserver.database.windows.net);
-   define('DB_USERNAME', jmf1086);
-   define('DB_PASSWORD', Homefry1);
-   define('DB_DATABASE', joeytv);
-   
-	
-   $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-	if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+// PHP Data Objects(PDO) Sample Code:
+try {
+    global $conn;
+	$conn = new PDO("sqlsrv:server = tcp:joeytvserver.database.windows.net,1433; Database = TvShows", "jmf1086", "{your_password_here}");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
 
 ?>
