@@ -20,7 +20,9 @@ global $conn;
 	   
       $sql = "SELECT ID FROM Emp_Login WHERE username = '$myusername' and password = '$mypassword'";
       try{
-	   $result = $conn->query($sql);
+	   $statement= $conn->prepare($sql);
+		 $statement->execute();
+		  $result=$statement->fetchAll();
       //$count = mysqli_num_rows($result); 
 	  //$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       //$active = $row['active'];
