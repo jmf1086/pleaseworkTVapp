@@ -10,11 +10,11 @@ global $db;
       // username and password sent from form 
 	   //test
       
-     $myusername = mysqli_real_escape_string($GLOBALS['db'],$_POST['username']);
-     $mypassword = mysqli_real_escape_string($GLOBALS['db'],$_POST['password']); 
+     //$myusername = mysqli_real_escape_string($GLOBALS['db'],$_POST['username']);
+     //$mypassword = mysqli_real_escape_string($GLOBALS['db'],$_POST['password']); 
       
-	  //$myusername = $_POST['username'];
-	  //$mypassword = $_POST['password'];
+	  $myusername = $_POST['username'];
+	  $mypassword = $_POST['password'];
 	   
       $sql = "SELECT ID FROM login WHERE username = '$myusername' and password = '$mypassword'";
       $result = mysqli_query($db,$sql);
