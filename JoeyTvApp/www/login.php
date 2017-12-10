@@ -18,10 +18,11 @@ global $db;
 	   
       $sql = "SELECT ID FROM login WHERE username = '$myusername' and password = '$mypassword'";
       $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $count = mysqli_num_rows($result); 
+	  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
       
-      $count = mysqli_num_rows($result);
+     
       
       // If result matched $myusername and $mypassword, table row must be 1 row
 	
@@ -33,7 +34,7 @@ global $db;
          
          header("location: index.php");
       }else {
-         $error = "Your Login Name or Password is invalid $sql c: $count";
+         $error = "Your Login Name or Password is invalid $sql c: 	$count";
       }
    }
 ?>
